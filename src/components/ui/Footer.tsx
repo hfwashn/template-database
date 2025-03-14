@@ -79,6 +79,7 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
+
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
                   Resources
@@ -110,6 +111,7 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
+
             </div>
             <div className="grid grid-cols-2 gap-8">
               <div>
@@ -178,8 +180,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:mt-20 sm:flex-row lg:mt-24 dark:border-gray-800">
+          <ThemeSwitch/>
           <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} Database, Inc. All rights
+            &copy; {new Date().getFullYear()} BlynData, Inc. All rights
             reserved.
           </p>
           <div className="rounded-full border border-gray-200 py-1 pl-1 pr-2 dark:border-gray-800">

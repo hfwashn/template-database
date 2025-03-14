@@ -2,14 +2,21 @@ import Footer from "@/components/ui/Footer"
 import { Navigation } from "@/components/ui/Navbar"
 import type { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
-import { Inter } from "next/font/google"
+import { Ubuntu } from "next/font/google"
 import "./globals.css"
 import { siteConfig } from "./siteConfig"
 
-const inter = Inter({
+// const inter = Inter({
+//  subsets: ["latin"],
+//  display: "swap",
+//  variable: "--font-inter",
+// })
+
+const ubuntu = Ubuntu({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-ubuntu",
+  weight: "400"
 })
 
 export const metadata: Metadata = {
@@ -51,7 +58,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} min-h-screen scroll-auto antialiased selection:bg-indigo-100 selection:text-indigo-700 dark:bg-gray-950`}
+        // className={`${inter.className} min-h-screen scroll-auto antialiased selection:bg-indigo-100 selection:text-indigo-700 dark:bg-gray-950`}
+        className={`${ubuntu.className} min-h-screen scroll-auto antialiased selection:bg-indigo-100 selection:text-indigo-700 dark:bg-gray-950`}
       >
         <ThemeProvider
           attribute="class"

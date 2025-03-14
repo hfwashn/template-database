@@ -22,7 +22,7 @@ export default function Features() {
       aria-labelledby="features-title"
       className="mx-auto mt-44 w-full max-w-6xl px-3"
     >
-      <Badge>Security at Scale</Badge>
+      <Badge>Built by Engineers</Badge>
       <h2
         id="features-title"
         className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
@@ -30,10 +30,9 @@ export default function Features() {
         Architected for speed and reliability
       </h2>
       <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
-        Database&rsquo; innovative architecture avoids the central bottlenecks
-        of traditional systems, enhancing system reliability. This design
-        ensures high productivity and security, minimizing the risk of service
-        disruptions and outages.
+      BlynData's distributed architecture, coupled with intelligent caching 
+      and optimized query engine, ensures secure performance by eliminating 
+      traditional bottlenecks during data ingestion and retrieval
       </p>
       <dl className="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800">
         {stats.map((stat, index) => (

@@ -1,9 +1,9 @@
 import Code from "@/components/Code"
 import {
-  RiLinksLine,
-  RiPlugLine,
-  RiShieldKeyholeLine,
-  RiStackLine,
+  RiEyeLine,
+  RiFocus3Line,
+  RiLineChartLine,
+  RiNotification4Line
 } from "@remixicon/react"
 import { Badge } from "../Badge"
 import CodeExampleTabs from "./CodeExampleTabs"
@@ -58,28 +58,28 @@ const code2 = `async function fetchCustomerOrders() {
 
 const features = [
   {
-    name: "Use Database with your stack",
+    name: "Pre-disclosed reporting",
     description:
-      "We offer client and server libraries in everything from React and Ruby to iOS.",
-    icon: RiStackLine,
+      "Early visibility into new credit accounts eliminating the pre-reporting gaps.",
+    icon: RiEyeLine,
   },
   {
-    name: "Try plug & play options",
+    name: "Inquiry outcome tracking",
     description:
-      "Customize and deploy data infrastructure directly from the Database Dashboard.",
-    icon: RiPlugLine,
+      "Identifies successful and failed conversions from credit inquiries, enabling precise tracking.",
+    icon: RiLineChartLine,
   },
   {
-    name: "Explore pre-built integrations",
+    name: "Identify of unreportable debts",
     description:
-      "Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.",
-    icon: RiLinksLine,
+      "Accounts legally restricted or prohibited from appearing on credit bureau reports.",
+    icon: RiFocus3Line,
   },
   {
-    name: "Security & privacy",
+    name: "Real-time activity & alerts ",
     description:
-      "Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
-    icon: RiShieldKeyholeLine,
+      "Monitor a target account and subscribe to important activity changes.",
+    icon: RiNotification4Line,
   },
 ]
 
@@ -89,12 +89,12 @@ export default function CodeExample() {
       aria-labelledby="code-example-title"
       className="mx-auto mt-28 w-full max-w-6xl px-3"
     >
-      <Badge>Developer-first</Badge>
+      <Badge>User-first</Badge>
       <h2
         id="code-example-title"
         className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
       >
-        Built by developers, <br /> for developers
+        Built by engineers, <br /> for everyone
       </h2>
       <p className="mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
         Rich and expressive query language that allows you to filter and sort by

@@ -1,6 +1,6 @@
 "use client"
 import * as Tabs from "@radix-ui/react-tabs"
-import { RiCodeSSlashLine, RiShapesLine } from "@remixicon/react"
+import { RiBracesLine, RiShapesLine } from "@remixicon/react"
 import Arrow from "../Arrow"
 
 export default function CodeExampleTabs({
@@ -36,12 +36,11 @@ export default function CodeExampleTabs({
               <RiShapesLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight text-gray-700 transition-all group-data-[state=active]:text-indigo-600 sm:text-lg dark:text-gray-400 dark:group-data-[state=active]:text-indigo-400">
-              Model everything
+              User friendly GUI
             </p>
           </div>
           <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-            Data integrity and query efficiency for diverse data types including
-            geospatial and time-series. Easy to create, effortless to maintain.
+            Visual query builder turns data exploration into actionable insights with multiple export formats, no technical expertise required. 
           </p>
         </Tabs.Trigger>
         <Tabs.Trigger
@@ -57,15 +56,15 @@ export default function CodeExampleTabs({
           </div>
           <div className="flex items-center gap-4">
             <div className="data-state aspect-square w-fit rounded-lg bg-white p-2 text-gray-700 ring-1 ring-black/10 transition-all group-data-[state=active]:text-indigo-600 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 dark:bg-gray-950 dark:text-gray-400 dark:ring-white/10 dark:group-data-[state=active]:text-indigo-400 dark:group-data-[state=active]:shadow-indigo-600/50">
-              <RiCodeSSlashLine aria-hidden="true" className="size-5" />
+              <RiBracesLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight text-gray-700 transition-all group-data-[state=active]:text-indigo-600 sm:text-lg dark:text-gray-400 dark:group-data-[state=active]:text-indigo-400">
-              Query efficiently
+              GraphQL API queries
             </p>
           </div>
           <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-            Leverage a developer-native query API to efficiently manage
-            PostgreSQL data. Initialize once, scale infinitely.
+            Leverage our developer-native API and integration endpoint to 
+            query and ingest target data into your environment or workflows.
           </p>
         </Tabs.Trigger>
       </Tabs.List>
