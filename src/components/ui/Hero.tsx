@@ -1,7 +1,5 @@
-import { RiPlayCircleFill } from "@remixicon/react"
 import Link from "next/link"
 import { Button } from "../Button"
-import HeroImage from "./HeroImage"
 
 export default function Hero() {
   return (
@@ -20,15 +18,20 @@ export default function Hero() {
         className="mt-6 max-w-lg animate-slide-up-fade text-lg text-gray-700 dark:text-gray-400"
         style={{ animationDuration: "900ms" }}
       >
-        BlynData provides creditors with realtime applicant insights. Query, view and ingest hidden target data.
+         Blynd AI helps lenders make smarter, safer decisions.  
+  <span className="block">
+    Credit inquiry outcomes, closing pre-reporting gaps, and identifying unreportable debts.
+  </span>
       </p>
+      
       <div
         className="mt-8 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
         style={{ animationDuration: "1100ms" }}
       >
         <Button className="h-10 font-semibold">
-          <Link href="#">Start 14-day trial</Link>
+          <Link href="#">Request a trial</Link>
         </Button>
+        {/** 
         <Button
           asChild
           variant="light"
@@ -48,12 +51,15 @@ export default function Hero() {
             Watch video
           </Link>
         </Button>
+        */}
       </div>
       <div
         className="relative mx-auto ml-3 mt-20 h-fit w-[40rem] max-w-6xl animate-slide-up-fade sm:ml-auto sm:w-full sm:px-2"
         style={{ animationDuration: "1400ms" }}
       >
+        {/**
         <HeroImage />
+         */}
         <div
           className="absolute inset-x-0 -bottom-20 -mx-10 h-2/4 bg-gradient-to-t from-white via-white to-transparent lg:h-1/4 dark:from-gray-950 dark:via-gray-950"
           aria-hidden="true"

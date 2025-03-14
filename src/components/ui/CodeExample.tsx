@@ -1,13 +1,30 @@
-import Code from "@/components/Code"
+import Code from "@/components/Code";
 import {
   RiEyeLine,
   RiFocus3Line,
   RiLineChartLine,
   RiNotification4Line
-} from "@remixicon/react"
-import { Badge } from "../Badge"
-import CodeExampleTabs from "./CodeExampleTabs"
+} from "@remixicon/react";
+import Image from "next/image";
+import { Badge } from "../Badge";
+import CodeExampleTabs from "./CodeExampleTabs";
+import gui from "./gui.png";
+//import { siteConfig } from "@/app/siteConfig";
 
+// /Users/bagga/BLYND/frontend/template-database/src/app/gui.png
+
+const code = (
+  <div className="w-full h-[31rem] relative">
+    <Image
+       src={gui}
+      alt="GUI Example"
+      layout="fill"
+      objectFit="cover"
+      className="rounded-lg"
+    />
+  </div>
+);
+/**
 const code = `CREATE TABLE Customers (
     customer_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
@@ -31,30 +48,44 @@ CREATE TABLE Order_Items (
     order_id INT REFERENCES Orders(order_id),
     item_id INT REFERENCES Items(item_id),
 );`
+ */
 
-const code2 = `async function fetchCustomerOrders() {
-    const result = await prisma.orders.findMany({
-        where: {
-            customer: {
-                name: 'Jack Beanstalk'
-            },
-            segmentation: {
-                type: 'young professional',
-                joinedYear: 2024,
-                region: 'us-west-01',
-            }
-        },
-        include: {
-            customer: true,
-            order_items: {
-                include: {
-                    item: true
-                }
-            }
+const code2 = `query GetDetailedCreditInquiryData {
+  Customers {
+    customer_id
+    name
+    gender
+    rewards_member
+    total_inquiries: credit_inquiries_aggregate {
+      aggregate {
+        count
+      }
+    }
+    average_score: credit_inquiries_aggregate {
+      aggregate {
+        avg {
+          score
         }
-    });
-    return result;
-}`
+      }
+    }
+    credit_inquiries(limit: 5, order_by: { inquiry_date: desc }) {
+      inquiry_id
+      inquiry_date
+      status
+      score
+      agency
+      post_status
+      loan_amount
+      interest_rate
+      loan_term
+      outcome {
+        approval_reason
+        decline_reason
+      }
+    }
+  }
+}
+`
 
 const features = [
   {
@@ -100,6 +131,19 @@ export default function CodeExample() {
         Rich and expressive query language that allows you to filter and sort by
         any field, no matter how nested it may be.
       </p>
+
+      <CodeExampleTabs
+  tab1={code} // Directly pass the JSX element for the image
+  tab2={
+    <Code
+      code={code2}
+      lang="javascript"
+      copy={false}
+      className="h-[31rem]"
+    />
+  }
+/>
+      {/** 
       <CodeExampleTabs
         tab1={
           <Code code={code} lang="sql" copy={false} className="h-[31rem]" />
@@ -113,6 +157,7 @@ export default function CodeExample() {
           />
         }
       />
+      */}
       <dl className="mt-24 grid grid-cols-4 gap-10">
         {features.map((item) => (
           <div
