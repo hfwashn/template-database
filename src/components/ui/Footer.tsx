@@ -1,6 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import ThemeSwitch from "../ThemeSwitch"
 
+/** 
 const navigation = {
   product: [
     { name: "Enterprise", href: "#", external: false },
@@ -27,6 +28,7 @@ const navigation = {
     { name: "DPA", href: "#", external: false },
   ],
 }
+**/
 
 export default function Footer() {
   return (
