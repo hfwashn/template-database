@@ -30,7 +30,7 @@ export default function Features() {
         Architected for speed and reliability
       </h2>
       <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
-      BlynData's distributed architecture, coupled with intelligent caching 
+      Blyn&apos;s distributed architecture, coupled with intelligent caching 
       and optimized query engine, ensures secure performance by eliminating 
       traditional bottlenecks during data ingestion and retrieval
       </p>
